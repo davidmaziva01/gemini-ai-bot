@@ -5,11 +5,10 @@ const app = express();
 const cors = require('cors');
 const port = process.env.PORT || 3000;
 
-const { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold, } = require('@google/generative-ai');
+const { GoogleGenerativeAI } = require('@google/generative-ai');
 
 const MODEL_NAME = "gemini-1.0-pro";
 
-// Routes
 app.post('/bot/chat', async(req, res) => {
     const message = req.query.message;
     
